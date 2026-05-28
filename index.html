@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonnus - Links</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(90deg, #3a3a3a 0%, #5a5a5a 50%, #3a3a3a 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        /* HEADER */
+        .header {
+            position: relative;
+            height: 200px;
+            background: linear-gradient(rgba(58,58,58,0.7), rgba(58,58,58,0.5)), url('https://i.postimg.cc/3wnV7jhv/Screenshot-2026-05-28-14-50-34-586-com-instagram-android-edit.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            margin-bottom: 40px;
+        }
+        
+        .profile-container { display: flex; align-items: center; gap: 20px; }
+        .profile-pic { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.8); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .profile-info { display: flex; flex-direction: column; }
+        .name { font-size: 2.5em; font-weight: bold; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+        .header-description { font-size: 1.1em; color: rgba(255,255,255,0.9); text-shadow: 1px 1px 4px rgba(0,0,0,0.5); margin-top: 5px; }
+        
+        /* LOGOS NO TOPO */
+        .top-logos { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 50px; padding: 0 20px; }
+        .logo-item { text-align: center; cursor: pointer; transition: all 0.3s ease; }
+        .logo-item:hover { transform: translateY(-5px); }
+        .logo-icon { width: 65px; height: 65px; border-radius: 15px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 1.8em; box-shadow: 0 8px 20px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2); }
+        .logo-icon img { width: 35px; height: 35px; object-fit: contain; }
+        .logo-name { font-size: 1em; font-weight: 600; padding: 6px 14px; background: rgba(255,255,255,0.15); border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); }
+        
+        /* CORES DAS LOGOS */
+        .bg-privacy { background: #ffffff; }
+        .bg-prive { background-color: #380106 !important; color: white !important; }
+        .bg-livepix { background: #00ffaa; }
+        .bg-insta { background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); }
+        .bg-twitter { background: #1DA1F2; }
+        .bg-telegram { background: #2AABEE; }
+        
+        /* GALERIA - GRID */
+        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1300px; margin: 0 auto; padding: 0 30px 50px; }
+        .photo-card { background: rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; position: relative; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1); }
+        .photo-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.08); }
+        .photo-container { position: relative; width: 100%; height: 320px; overflow: hidden; }
+        .photo-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .photo-card:hover .photo-container img { transform: scale(1.05); }
+        
+        /* LOGO NA FOTO */
+        .photo-logo { position: absolute; top: 15px; right: 15px; width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; z-index: 2; border: 1px solid rgba(255,255,255,0.2); }
+        .photo-logo img { width: 25px; height: 25px; }
+        .photo-logo i { font-size: 1.3em; color: white; }
+        
+        /* ANIMAÇÃO DUPLA: BRANCO E LARANJA */
+        @keyframes pulsoMesclado {
+            0% { border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+            33% { border-color: #ffffff; box-shadow: 0 0 20px #ffffff, 0 0 40px rgba(255,255,255,0.5); }
+            66% { border-color: #FF8C00; box-shadow: 0 0 20px #FF4500, 0 0 40px #FF8C00; }
+            100% { border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        }
+        .piscando { animation: pulsoMesclado 2.2s infinite ease-in-out; }
+        
+        .platform-name { position: absolute; bottom: 0; left: 0; right: 0; padding: 18px; text-align: center; font-weight: 600; background: rgba(60, 60, 60, 0.7); border-top: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) {
+            .gallery { grid-template-columns: 1fr; }
+            .header { height: 150px; padding: 0 20px; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="profile-container">
+            <img src="https://i.postimg.cc/N0pSY8t2/Screenshot-2026-05-28-14-49-09-418-com-instagram-android-edit.jpg" class="profile-pic">
+            <div class="profile-info">
+                <div class="name">Demonnus</div>
+                <div class="header-description">Bem vindo ao inferno</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="top-logos">
+        <div class="logo-item" onclick="window.open('https://privacy.com.br/@demonnus', '_blank')"><div class="logo-icon bg-privacy"><img src="https://i.imgur.com/3eyn7gr.png"></div><div class="logo-name">Privacy</div></div>
+        <div class="logo-item" onclick="window.open('https://models.cameraprive.com/br/demonnus', '_blank')"><div class="logo-icon bg-prive"><img src="https://i.postimg.cc/Kz15VHX1/20260404-203349.jpg"></div><div class="logo-name">CamPriv</div></div>
+        <div class="logo-item" onclick="window.open('https://livepix.gg/demonnus', '_blank')"><div class="logo-icon bg-livepix"><i class="fas fa-wallet"></i></div><div class="logo-name">Livepix</div></div>
+        <div class="logo-item" onclick="window.open('https://www.instagram.com/d3monnus?igsh=eWd0OTh4a2s4cWdy', '_blank')"><div class="logo-icon bg-insta"><i class="fab fa-instagram"></i></div><div class="logo-name">Instagram</div></div>
+        <div class="logo-item" onclick="window.open('https://x.com/devillishhells', '_blank')"><div class="logo-icon bg-twitter"><i class="fab fa-twitter"></i></div><div class="logo-name">Twitter</div></div>
+        <div class="logo-item" onclick="window.open('https://t.me/+zqEPY8BUsbUzZjcx', '_blank')"><div class="logo-icon bg-telegram"><i class="fab fa-telegram"></i></div><div class="logo-name">TeleFree</div></div>
+    </div>
+
+    <div class="gallery">
+        <!-- PRIVACY COM PISCA DUPLO -->
+        <div class="photo-card piscando">
+            <div class="photo-container"><a href="https://privacy.com.br/@demonnus"><img src="https://i.postimg.cc/tgzQJZ0k/IMG-20260528-WA0233.jpg"></a><div class="photo-logo bg-privacy"><img src="https://i.imgur.com/3eyn7gr.png"></div><div class="platform-name">Privacy</div></div>
+        </div>
+        <div class="photo-card">
+            <div class="photo-container"><a href="https://models.cameraprive.com/br/demonnus"><img src="https://i.postimg.cc/0NCRjMgV/IMG-20260528-WA0228.jpg"></a><div class="photo-logo bg-prive"><img src="https://i.postimg.cc/Kz15VHX1/20260404-203349.jpg"></i></div><div class="platform-name">Câmera Privê</div></div>
+        </div>
+        <div class="photo-card">
+            <div class="photo-container"><a href="https://livepix.gg/demonnus"><img src="https://i.postimg.cc/mrSfkzxY/IMG-20260528-WA0226.jpg"></a><div class="photo-logo bg-livepix"><i class="fas fa-wallet"></i></div><div class="platform-name">Livepix</div></div>
+        </div>
+        <div class="photo-card">
+            <div class="photo-container"><a href="https://www.instagram.com/d3monnus?igsh=eWd0OTh4a2s4cWdy"><img src="https://i.postimg.cc/j2gyS55Q/Screenshot-2026-05-28-14-56-33-245-com-instagram-android-edit.jpg"></a><div class="photo-logo bg-insta"><i class="fab fa-instagram"></i></div><div class="platform-name">Instagram</div></div>
+        </div>
+        <div class="photo-card">
+            <div class="photo-container"><a href="https://x.com/devillishhells"><img src="https://i.postimg.cc/5tmdyYcn/IMG-20260528-WA0234.jpg"></a><div class="photo-logo bg-twitter"><i class="fab fa-twitter"></i></div><div class="platform-name">Twitter</div></div>
+        </div>
+        <div class="photo-card">
+            <div class="photo-container"><a href="https://t.me/+zqEPY8BUsbUzZjcx"><img src="https://i.postimg.cc/wBk8MyKF/IMG-20260528-WA0236.jpg"></a><div class="photo-logo bg-telegram"><i class="fab fa-telegram"></i></div><div class="platform-name">Telegram Free</div></div>
+        </div>
+    </div>
+</body>
+</html>
